@@ -235,4 +235,12 @@
   }
 }
 
-
+.alert-wrapper {
+  background: #e5e5e5;
+}
+.my-custom-class .alert-wrapper {
+  background: #e5e5e5;
+}
+.my-custom-menu {
+  --width: 500px;
+}

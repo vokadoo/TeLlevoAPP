@@ -1,17 +1,26 @@
-<ion-content>
 
-  <ion-header>
-    <img src="assets/img/duoc.jpg" alt=""/>
-  </ion-header>
-  <ion-item>
-<ion-label position="floating">NOMBRE USUARIO</ion-label>
-<ion-input placeholder="Usuario"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="floating">CONTRASEÑA</ion-label>
-  <ion-input placeholder="Contraseña" type="password"></ion-input>
-  </ion-item>
-  <ion-button expand="block" class="primary">INICIAR SESION</ion-button>
-
-
-</ion-content>
+    <img src="assets/img/duoc.jpg" alt="" />
+  <ion-content>
+    <form [formGroup]="control" novalidate>
+      <ion-item lines="full">
+        <ion-label position="floating">NOMBRE USUARIO</ion-label>
+        <ion-input placeholder="Usuario" [(ngModel)]="dato" [ngModelOptions]="{standalone: true}" ></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating" >CONTRASEÑA</ion-label>
+        <ion-input placeholder="Contraseña" type="password" formControlName="contraseña"></ion-input>
+      </ion-item>
+   <ion-row>
+     <ion-col >
+      <ion-button expand="block" class="primary"  (click)="presentAlert()"  [disabled]="!control.valid">INICIAR SESION</ion-button>
+     </ion-col>
+   </ion-row>
+        
+    <div class="ion-text-center">
+      <ion-col>
+        <ion-router-link href="forget">
+          Recuperar Contraseña</ion-router-link>
+      </ion-col>
+    </div>
+  </form>
+  </ion-content>

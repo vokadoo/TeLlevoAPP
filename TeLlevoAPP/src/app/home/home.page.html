@@ -1,19 +1,21 @@
 <ion-header > 
     <img src="assets/img/duoc.jpg" alt=""/>
+    <img src="assets/img/Bienvenido.png" alt="">
 </ion-header>
 <ion-content>
+      
     
-      <img src="assets/img/tellevo.jpg" alt="">
-      <ion-button color="primary" expand="block" (click)="siguiente()">Siguiente</ion-button>
+      <img (click)="siguiente()" src="assets/img/tellevo.jpg" alt="">
+      
     
 </ion-content>
 
 <ion-content>
-  <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
+  <ion-fab horizontal="top" vertical="center" slot="fixed" edge>
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
-    <ion-fab-list>
+    <ion-fab-list side="end">
       <ion-fab-button color="light">
         <ion-icon name="logo-facebook"></ion-icon>
       </ion-fab-button>
