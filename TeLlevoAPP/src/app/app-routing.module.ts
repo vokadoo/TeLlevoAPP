@@ -23,6 +23,18 @@ const routes: Routes = [
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
   },
+  {
+    path: 'splash',
+    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+  },
+  {
+    path: 'splash2',
+    loadChildren: () => import('./splash2/splash2.module').then( m => m.Splash2PageModule)
+  },
+  {
+    path: 'costo',
+    loadChildren: () => import('./costo/costo.module').then( m => m.CostoPageModule)
+  }
 ];
 
 @NgModule({

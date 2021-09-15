@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 
 
+
 @Component({
   selector: 'app-forget',
   templateUrl: './forget.page.html',
@@ -11,10 +12,9 @@ import { ToastController } from '@ionic/angular';
 export class ForgetPage implements OnInit{
 
   user: string;
-  constructor(private router: Router,public toastController: ToastController) {}
-  ngOnInit(){
-
-  }
+  constructor(private router: Router,
+    public toastController: ToastController) {}
+  ngOnInit(){}
   usuario(){
     this.presentToast('Se envio un correo a '+this.user+'@duocuc.cl');
   }
@@ -30,5 +30,6 @@ export class ForgetPage implements OnInit{
     });
     toast.present();
   }
+
 
 }

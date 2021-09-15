@@ -1,9 +1,6 @@
-
+<img src="assets/img/duoc.jpg" alt=""/>
 <ion-content>
-    <img src="assets/img/duoc.jpg" alt=""/>
-    <div class="ion-text-center">
-      <h1>Recuperar Contraseña</h1>
-    </div>
+  <img class="padding-left" src="assets/img/Recuperar.png">
 <ion-item lines="full">
 <ion-label position="floating">NOMBRE USUARIO</ion-label>
 <ion-input placeholder="Usuario"  [(ngModel)]="user" ></ion-input>
@@ -12,8 +9,8 @@
   (click)="usuario()" >RECUPERAR</ion-button>
   <div class="ion-text-center">
       <ion-col>
-        <ion-router-link href="login">
-          Volver a inicio</ion-router-link>
+        <ion-label [routerLink]="['/home']">
+          Volver a inicio</ion-label>
       </ion-col>
     </div>
 
