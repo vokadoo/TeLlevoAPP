@@ -25,7 +25,7 @@ export class MainPage {
    this.menu.open();
  }
  confirmar(){
-   this.presentToast('Viaje confirmado, tiempo aproximado XXXXX');
+   this.presentToast('Viaje confirmado, tiempo aproximado llegada del vehiculo XXXXX');
  }
  async presentToast(msg: string){
    const toast = await this.toastController.create({
