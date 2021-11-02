@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MenuController, ToastController, AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.page.html',

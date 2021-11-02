@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
@@ -13,27 +13,27 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'forget',
-    loadChildren: () => import('./forget/forget.module').then( m => m.ForgetPageModule)
+    loadChildren: () => import('./pages/forget/forget.module').then( m => m.ForgetPageModule)
   },
   {
     path: 'main',
-    loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
+    loadChildren: () => import('./pages/main/main.module').then( m => m.MainPageModule)
   },
   {
     path: 'splash',
-    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+    loadChildren: () => import('./pages/splash/splash.module').then( m => m.SplashPageModule)
   },
   {
     path: 'splash2',
-    loadChildren: () => import('./splash2/splash2.module').then( m => m.Splash2PageModule)
+    loadChildren: () => import('./pages/splash2/splash2.module').then( m => m.Splash2PageModule)
   },
   {
     path: 'costo',
-    loadChildren: () => import('./costo/costo.module').then( m => m.CostoPageModule)
+    loadChildren: () => import('./pages/costo/costo.module').then( m => m.CostoPageModule)
   }
 ];
 

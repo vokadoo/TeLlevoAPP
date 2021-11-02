@@ -8,30 +8,30 @@ import { AlertController, LoadingController } from '@ionic/angular';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit{
+export class LoginPage implements OnInit {
   dato: string;
   control: FormGroup;
   isSubmitted = false;
 
 
   constructor(private router: Router,
-     public formBuilder: FormBuilder,
-     public alertController: AlertController,
-     public loadingController: LoadingController){}
+    public formBuilder: FormBuilder,
+    public alertController: AlertController,
+    public loadingController: LoadingController) { }
 
-  ngOnInit(){
+  ngOnInit() {
     //controla caracteres minimo para validar
     this.control = this.formBuilder.group({
-      contraseña: ['',[Validators.required, Validators.minLength(6)]]
+      contraseña: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
   //
-  main(){
-    let navigationExtras: NavigationExtras={
-      state:{dato: this.dato}// Al estado le asigno el parametro
+  main() {
+    let navigationExtras: NavigationExtras = {
+      state: { dato: this.dato }// Al estado le asigno el parametro
     };
     console.log(this.dato);
-    this.router.navigate(['/main'],navigationExtras);
+    this.router.navigate(['/main'], navigationExtras);
   }
 
   async presentAlert1() {

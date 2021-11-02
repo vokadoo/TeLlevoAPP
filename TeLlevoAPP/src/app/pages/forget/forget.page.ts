@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/quotes */
+/* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
@@ -15,12 +17,21 @@ export class ForgetPage implements OnInit{
   constructor(private router: Router,
     public toastController: ToastController) {}
   ngOnInit(){}
-  usuario(){
-    this.presentToast('Se envio un correo a '+this.user+'@duocuc.cl');
-  }
+
+  dato: any={
+    user:""
+  };
 
   login(){
-    this.router.navigate(['/login']);
+    // eslint-disable-next-line eqeqeq
+    if(this.dato.user!==""){
+      this.presentToast('Se envio un correo a '+this.dato.user+'@duocuc.cl')
+      this.router.navigate(['/login'])
+    }else{
+      this.presentToast('Debe ingresar un usuario valido')
+    }
+
+
   }
 
   async presentToast(msg: string) {

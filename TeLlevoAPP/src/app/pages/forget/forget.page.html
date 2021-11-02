@@ -3,10 +3,9 @@
   <img class="padding-left" src="assets/img/Recuperar.png">
 <ion-item lines="full">
 <ion-label position="floating">NOMBRE USUARIO</ion-label>
-<ion-input placeholder="Usuario"  [(ngModel)]="user" ></ion-input>
+<ion-input placeholder="Usuario"  [(ngModel)]="dato.user" ></ion-input>
 </ion-item>
-  <ion-button expand="block" class="primary" (click)="login()"
-  (click)="usuario()" >RECUPERAR</ion-button>
+  <ion-button expand="block" class="primary" (click)="login()">RECUPERAR</ion-button>
   <div class="ion-text-center">
       <ion-col>
         <ion-label [routerLink]="['/home']">

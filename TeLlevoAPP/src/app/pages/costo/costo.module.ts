@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CostoPageRoutingModule } from './costo-routing.module';
 
 import { CostoPage } from './costo.page';
+import { ComponenteSedeComponent } from '../../components/componente-sede/componente-sede.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { CostoPage } from './costo.page';
     IonicModule,
     CostoPageRoutingModule
   ],
-  declarations: [CostoPage]
+  declarations: [CostoPage, ComponenteSedeComponent]
 })
 export class CostoPageModule {}
