@@ -31,11 +31,11 @@ export class MainPage {
   toggleMenu() {
     this.menu.open();
   }
-  confirmar() {
-    this.presentToast(
-      'Viaje confirmado, tiempo aproximado llegada del vehiculo XXXXX'
-    );
-  }
+  
+ confirmar(){
+  this.router.navigate(['/fin']);
+  this.presentToast('Viaje confirmado, tiempo aproximado llegada del vehiculo XXXXX');
+ }
   async presentToast(msg: string) {
     const toast = await this.toastController.create({
       message: msg,
